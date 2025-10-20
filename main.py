@@ -11,6 +11,7 @@ api_secret = api_data["api"]["api_secret"]
 client  = Client(api_key, api_secret)
 account = client.get_account()
 
+"""
 # Get account portfolio
 balances = account['balances']
 
@@ -32,6 +33,7 @@ for i in assets:
     print(i['asset'])
     current_price = client.get_symbol_ticker(symbol=i['asset']+'USDT')
     total_portfolio_usdt += float(current_price['price'])*i['amount']
+"""
 
 # Get all coin prices now
 coin_tickers = client.get_all_tickers()
